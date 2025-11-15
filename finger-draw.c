@@ -15,7 +15,7 @@ enum {
 	SHIFT_MODE_DOWN
 };
 
-int shiftMode = SHIFT_MODE_LIFT;
+int shiftMode = SHIFT_MODE_DOWN;
 unsigned twofinger_detect_delay_clocks = CLOCKS_PER_SEC * 50 / 1000;
 unsigned click_detect_delay_clocks = CLOCKS_PER_SEC * 50 / 1000;
 HHOOK miHook;
@@ -496,4 +496,5 @@ int WINAPI WinMain(HINSTANCE instance, HINSTANCE hPrevInstance,
     SetEvent(queueReady);
     UnhookWindowsHookEx(miHook);
     return 0;
+
 }
